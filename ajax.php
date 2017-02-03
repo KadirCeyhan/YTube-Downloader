@@ -5,7 +5,6 @@ $thumb = $title = '';
 $iArray = array(18 => "MP4 360p", 22 => "MP4 720p", 36 => "3GP 240p", 43 => "WebM 360p");
 
 function getID($url) {
-	global $Code404;
 	$pattern = '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i';
 	if (preg_match($pattern, $url, $matches)) return $matches[1];
 	else exit(json_encode(array(
